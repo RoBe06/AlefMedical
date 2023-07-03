@@ -91,7 +91,7 @@ function agregarFarmacias() {
 function redirectToWhatsApp(phoneNumber) {
   var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   var whatsappURL = isMobile
-    ? "whatsapp://send?phone=" + phoneNumber
+    ? "whatsapp://send?phone=+54" + phoneNumber
     : "https://web.whatsapp.com/send?phone=+54" + phoneNumber;
   window.open(whatsappURL, "_blank");
 }
