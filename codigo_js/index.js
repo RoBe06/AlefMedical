@@ -48,7 +48,7 @@ function agregarFarmacias() {
     var listado = farmacias.map(function(farmacia, index) {
         var telefono = farmacia.telefono ? `<p><a href="tel:+54 ${farmacia.telefono}" class="farmacias_numero">Telefono: ${farmacia.telefono} <br> </a></p>` : "";
         var envio = farmacia.envioDomicilio ? `<p class="farmacias_envio">${farmacia.envioDomicilio} <br> </p>` : "";
-        var whatsapp = farmacia.whatsapp ? `<p> <a href="tel:+54 ${farmacia.whatsapp}" class="farmacias_numero">Whatsapp: ${farmacia.whatsapp}<br> </a></p>` : "";
+        var whatsapp = farmacia.whatsapp ? `<p> <a href="https://api.whatsapp.com/send?phone=+54${farmacia.whatsapp}" class="farmacias_numero">Whatsapp: ${farmacia.whatsapp}<br> </a></p>` : "";
         var cardStyle = (farmacia.telefono || farmacia.whatsapp || farmacia.envioDomicilio) ? "primero" : "segundo";
         var localidad = (farmacia.localidad == "CABA" || farmacia.localidad == "Lomas de Zamora") ? "filtro_uno" : "filtro_dos";
         
