@@ -59,7 +59,7 @@ function agregarFarmacias() {
                             <div class="card-line primer"></div>
                             <p class="farmacias_domicilio audifarm">${farmacia.domicilio} - ${farmacia.localidad}</p>
                             <p class="farmacias_envio audifarm"> ${farmacia.envioDomicilio} </p> 
-                            <p> <a href="https://api.whatsapp.com/send?phone=+54${farmacia.whatsapp}" class="farmacias_numero prm"> Whatsapp: ${farmacia.whatsapp}<br></a></p>
+                            <p> <a href="https://api.whatsapp.com/send?phone=+541132088472" class="farmacias_numero prm"> Whatsapp: ${farmacia.whatsapp}<br></a></p>
                               
                         </div>
                     </div>`;
