@@ -426,7 +426,7 @@ header .logo_container .logo {
     height: 220px !important;
   }
   .listado_container .primero {
-    height: 240px;
+    height: 250px;
   }
 }
 @media screen and (max-width: 350px) {
@@ -444,7 +444,7 @@ header .logo_container .logo {
     height: 210px !important;
   }
   .listado_container .primero {
-    height: 250px;
+    height: 240px;
   }
   .listado_container .farma .nombre_farmacias {
     font-size: 18px;
