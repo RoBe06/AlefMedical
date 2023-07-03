@@ -77,7 +77,25 @@ function agregarFarmacias() {
     });
 
     document.getElementById("listadoFarmacias").innerHTML = listado.join('');
+
+    var phoneNumberLinks = document.getElementsByClassName("farmacias_numero");
+  for (var i = 0; i < phoneNumberLinks.length; i++) {
+    phoneNumberLinks[i].addEventListener("click", function (event) {
+      event.preventDefault();
+      var phoneNumber = this.innerText.replace(/[^0-9]/g, "");
+      redirectToWhatsApp(phoneNumber);
+    });
+  }
 }
+
+function redirectToWhatsApp(phoneNumber) {
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  var whatsappURL = isMobile
+    ? "whatsapp://send?phone=" + phoneNumber
+    : "https://web.whatsapp.com/send?phone=" + phoneNumber;
+  window.open(whatsappURL, "_blank");
+}
+
 
 agregarFarmacias();
 
