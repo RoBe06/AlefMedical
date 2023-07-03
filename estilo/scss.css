@@ -426,7 +426,7 @@ header .logo_container .logo {
     height: 220px !important;
   }
   .listado_container .primero {
-    height: 250px;
+    height: 260px;
   }
 }
 @media screen and (max-width: 350px) {
