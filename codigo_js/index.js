@@ -5,8 +5,8 @@ var farmacias = [
     whatsapp : 1132088472,
     envioDomicilio : "Coordinar entrega en red de farmacias sin cargo"},
 
-    {nombre : "Farmacia Scienza - Puyrredon",
-    domicilio : "Av.Pueyrredon 1460",
+    {nombre : "Farmacia Scienza - Pueyrredón",
+    domicilio : "Av.Pueyrredón 1460",
     localidad : "CABA",
     telefono : 1155547975,
     whatsapp : 1163999506,
