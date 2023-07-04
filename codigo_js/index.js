@@ -21,10 +21,12 @@ var farmacias = [
 
     {nombre : "Farmacia Farmafé",
     domicilio : "Av.Rivadavia 4399",
+    telefono :  1122993276,
     localidad : "CABA"},
     
     {nombre : "Farmacia Rissi",
     domicilio : "H.Yrigoyen 8955",
+    telefono : 1142442644,
     localidad : "Lomas de Zamora"},
 
     {nombre : "Farmacia Rucci",
@@ -54,7 +56,7 @@ function agregarFarmacias() {
         var telefono = farmacia.telefono ? `<p><a href="tel:+54 ${farmacia.telefono}" class="farmacias_numero">Telefono: ${farmacia.telefono} <br> </a></p>` : "";
         var envio = farmacia.envioDomicilio ? `<p class="farmacias_envio">${farmacia.envioDomicilio} <br> </p>` : "";
         var whatsapp = farmacia.whatsapp ? `<p> <a href="https://api.whatsapp.com/send?phone=+54${farmacia.whatsapp}" class="farmacias_numero whatsapp">Whatsapp: ${farmacia.whatsapp}<br> </a></p>` : "";
-        var cardStyle = (farmacia.whatsapp || farmacia.envioDomicilio) ? "primero" : "segundo";
+        var cardStyle = ((farmacia.whatsapp && farmacia.envioDomicilio) || farmacia.envioDomicilio)? "primero" : "segundo";
         var localidad = (farmacia.localidad == "CABA" || farmacia.localidad == "Lomas de Zamora") ? "filtro_uno" : "filtro_dos";
         
         if(index == 0) {

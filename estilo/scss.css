@@ -294,7 +294,7 @@ header .logo_container .logo {
 }
 
 .segundo {
-  height: 167px;
+  height: 190px;
 }
 
 .show {
@@ -322,7 +322,7 @@ header .logo_container .logo {
     height: 240px;
   }
   .listado_container .segundo {
-    height: 170px;
+    height: 190px;
   }
 }
 @media screen and (max-width: 770px) {
@@ -391,7 +391,7 @@ header .logo_container .logo {
     height: 210px;
   }
   .listado_container .segundo {
-    height: 145px;
+    height: 160px;
   }
   .listado_container .primer {
     border-top: 5px solid #22814d !important;
@@ -420,7 +420,7 @@ header .logo_container .logo {
     height: 220px;
   }
   .listado_container .segundo {
-    height: 160px;
+    height: 180px;
   }
 }
 @media screen and (max-width: 510px) {
@@ -547,9 +547,6 @@ header .logo_container .logo {
 #myBtnContainer .active {
   background: #22814d;
   color: #f0f0f0;
-}
-#myBtnContainer .btn:hover {
-  background-color: #d3d3d3;
 }
 @media screen and (max-width: 670px) {
   #myBtnContainer .btn {
