@@ -72,7 +72,7 @@
   }
 
   .segundo {
-    height: 140px;
+    height: 167px;
   }
 
   .show {
@@ -103,6 +103,10 @@
 
      .primero {
        height: 240px;
+      }
+
+      .segundo {
+        height: 170px;
       }
     }
   }     
@@ -141,12 +145,12 @@
     grid-template-columns: 250px 250px;
 
      .primero {
-      height: 285px;
+      height: 280px;
       width: 100%;
     }
 
     .segundo {
-      height: 140px;
+      height: 185px;
       width: 100%;
     }
 
@@ -155,6 +159,20 @@
       height: 200px ;
       grid-area: principal;
      }
+
+     .farma {
+
+      .farmacias_numero{
+      font-size: 19px;
+     }
+
+     .nombre_farmacias {
+      font-weight: 700;
+      font-size: 22px;
+      color: #2b5074;
+    }
+    }
+
   }
 }
 
@@ -181,7 +199,7 @@
     }
   
     .segundo {
-      height: 140px;
+      height: 145px;
     }
 
     .primer{
@@ -217,6 +235,10 @@
      .primero {
       height: 220px;
     }
+
+    .segundo {
+      height: 160px;
+    }
   } 
 }
 
@@ -243,6 +265,11 @@
      .primero {
       height: 260px;
     }
+
+    .segundo {
+      height: 180px;
+    }
+
   } 
 
 }
@@ -267,6 +294,10 @@
 
      .primero {
       height: 240px;
+    }
+
+    .segundo {
+      height: 170px;
     }
     .farma {
       

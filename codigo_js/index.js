@@ -29,10 +29,12 @@ var farmacias = [
 
     {nombre : "Farmacia Rucci",
     domicilio : "San Juan 497 - Rosario",
+    telefono : 3414483783,
     localidad : "Santa Fe"},  
 
     {nombre: "Farmacia Libertad",
      domicilio : "Unanue 514 - Santa Rosa",
+     telefono : 2954431903,
      localidad : "La Pampa"},  
 
     {nombre : "Farmacia Luján",
@@ -41,6 +43,7 @@ var farmacias = [
 
     {nombre : "Farmacia Farmarket",
     domicilio : "Mendoza 386 - S.M. Tucumán",
+    telefono : 3854108383,
     localidad : "Tucumán"}
 ]
 
@@ -49,7 +52,7 @@ function agregarFarmacias() {
         var telefono = farmacia.telefono ? `<p><a href="tel:+54 ${farmacia.telefono}" class="farmacias_numero">Telefono: ${farmacia.telefono} <br> </a></p>` : "";
         var envio = farmacia.envioDomicilio ? `<p class="farmacias_envio">${farmacia.envioDomicilio} <br> </p>` : "";
         var whatsapp = farmacia.whatsapp ? `<p> <a href="https://api.whatsapp.com/send?phone=+54${farmacia.whatsapp}" class="farmacias_numero whatsapp">Whatsapp: ${farmacia.whatsapp}<br> </a></p>` : "";
-        var cardStyle = (farmacia.telefono || farmacia.whatsapp || farmacia.envioDomicilio) ? "primero" : "segundo";
+        var cardStyle = (farmacia.whatsapp || farmacia.envioDomicilio) ? "primero" : "segundo";
         var localidad = (farmacia.localidad == "CABA" || farmacia.localidad == "Lomas de Zamora") ? "filtro_uno" : "filtro_dos";
         
         if(index == 0) {
@@ -103,7 +106,7 @@ function filterSelection(location) {
     if (location === "all") {
       for (var i = 0; i < farmacias.length; i++) {
         farmacias[i].style.display = "block";
-        
+
       }
     } else {
       for (var i = 0; i < farmacias.length; i++) {
@@ -115,6 +118,7 @@ function filterSelection(location) {
 
         } else {
           farmacia.style.display = "none";
+
         }
       }
     }
