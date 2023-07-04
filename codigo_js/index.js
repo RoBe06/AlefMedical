@@ -48,7 +48,7 @@ function agregarFarmacias() {
     var listado = farmacias.map(function(farmacia, index) {
         var telefono = farmacia.telefono ? `<p><a href="tel:+54 ${farmacia.telefono}" class="farmacias_numero">Telefono: ${farmacia.telefono} <br> </a></p>` : "";
         var envio = farmacia.envioDomicilio ? `<p class="farmacias_envio">${farmacia.envioDomicilio} <br> </p>` : "";
-        var whatsapp = farmacia.whatsapp ? `<p> <a href="https://api.whatsapp.com/send?phone=+54${farmacia.whatsapp}" class="farmacias_numero">Whatsapp: ${farmacia.whatsapp}<br> </a></p>` : "";
+        var whatsapp = farmacia.whatsapp ? `<p> <a href="https://api.whatsapp.com/send?phone=+54${farmacia.whatsapp}" class="farmacias_numero whatsapp">Whatsapp: ${farmacia.whatsapp}<br> </a></p>` : "";
         var cardStyle = (farmacia.telefono || farmacia.whatsapp || farmacia.envioDomicilio) ? "primero" : "segundo";
         var localidad = (farmacia.localidad == "CABA" || farmacia.localidad == "Lomas de Zamora") ? "filtro_uno" : "filtro_dos";
         
@@ -59,7 +59,7 @@ function agregarFarmacias() {
                             <div class="card-line primer"></div>
                             <p class="farmacias_domicilio audifarm">${farmacia.domicilio} - ${farmacia.localidad}</p>
                             <p class="farmacias_envio audifarm"> ${farmacia.envioDomicilio} </p> 
-                            <p> <a href="https://api.whatsapp.com/send?phone=+54{farmacia.whatsapp}" class="farmacias_numero prm"> Whatsapp: ${farmacia.whatsapp}<br></a></p>
+                            <p> <a href="https://api.whatsapp.com/send?phone=+54{farmacia.whatsapp}" class="farmacias_numero prm whatsapp"> Whatsapp: ${farmacia.whatsapp}<br></a></p>
                               
                         </div>
                     </div>`;
@@ -78,7 +78,7 @@ function agregarFarmacias() {
 
     document.getElementById("listadoFarmacias").innerHTML = listado.join('');
 
-    var phoneNumberLinks = document.getElementsByClassName("farmacias_numero");
+    var phoneNumberLinks = document.getElementsByClassName("whatsapp");
   for (var i = 0; i < phoneNumberLinks.length; i++) {
     phoneNumberLinks[i].addEventListener("click", function (event) {
       event.preventDefault();
@@ -95,7 +95,6 @@ function redirectToWhatsApp(phoneNumber) {
     : "https://web.whatsapp.com/send?phone=+54" + phoneNumber;
   window.open(whatsappURL, "_blank");
 }
-
 
 agregarFarmacias();
 
@@ -121,6 +120,7 @@ function filterSelection(location) {
   }
 
   var btnContainer = document.getElementById("myBtnContainer");
+
     var btns = btnContainer.getElementsByClassName("btn");
     for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {
@@ -129,7 +129,4 @@ function filterSelection(location) {
         this.className += " active";
     });
 }
-
-
-
 
