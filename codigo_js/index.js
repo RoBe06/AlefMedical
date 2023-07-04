@@ -59,13 +59,12 @@ function agregarFarmacias() {
                             <div class="card-line primer"></div>
                             <p class="farmacias_domicilio audifarm">${farmacia.domicilio} - ${farmacia.localidad}</p>
                             <p class="farmacias_envio audifarm"> ${farmacia.envioDomicilio} </p> 
-                            <p> <a href="https://api.whatsapp.com/send?phone=+54{farmacia.whatsapp}" class="farmacias_numero prm whatsapp"> Whatsapp: ${farmacia.whatsapp}<br></a></p>
-                              
+                            <p> <a href="https://api.whatsapp.com/send?phone=+54{farmacia.whatsapp}" class="farmacias_numero prm whatsapp"> Whatsapp: ${farmacia.whatsapp}<br></a></p>    
                         </div>
                     </div>`;
         }
         else{
-            return `<div data-aos="fade-right" class="farma ${cardStyle} filterDiv ${localidad}">
+            return `<div data-aos="fade-right" class="filterDiv farma ${cardStyle} ${localidad}">
                             <div class="text-center">
                                 <h5 class="nombre_farmacias">${farmacia.nombre}</h5>
                                 <div class="card-line"></div>
@@ -104,6 +103,7 @@ function filterSelection(location) {
     if (location === "all") {
       for (var i = 0; i < farmacias.length; i++) {
         farmacias[i].style.display = "block";
+        
       }
     } else {
       for (var i = 0; i < farmacias.length; i++) {
@@ -112,13 +112,14 @@ function filterSelection(location) {
   
         if (farmaciaLocation) {
           farmacia.style.display = "block";
-          farmacia.setAttribute("data-aos", "fade-right");
+
         } else {
           farmacia.style.display = "none";
-          farmacia.removeAttribute("data-aos");
         }
       }
     }
+
+    AOS.refresh();
   }
 
   var btnContainer = document.getElementById("myBtnContainer");

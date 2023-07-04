@@ -1,0 +1,51 @@
+#myBtnContainer {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+#myBtnContainer .btn {
+  width: 170px;
+  height: 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 15px;
+  color: #22814d;
+  background: #f0f0f0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+#myBtnContainer .active {
+  background: #22814d;
+  color: #f0f0f0;
+}
+#myBtnContainer .btn:hover {
+  background-color: #d3d3d3;
+}
+@media screen and (max-width: 670px) {
+  #myBtnContainer .btn {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 590px) {
+  #myBtnContainer .btn {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 470px) {
+  #myBtnContainer .btn {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #myBtnContainer .btn {
+    font-size: 14px;
+    margin: 6px;
+    height: 55px;
+  }
+}
+@media screen and (max-width: 300px) {
+  #myBtnContainer .btn {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=filtro.css.map */
