@@ -53,7 +53,7 @@ function agregarFarmacias() {
         var localidad = (farmacia.localidad == "CABA" || farmacia.localidad == "Lomas de Zamora") ? "filtro_uno" : "filtro_dos";
         
         if(index == 0) {
-            return `<div class="filterDiv farma ${cardStyle} ${localidad} principal">
+            return `<div data-aos="fade-right" class="filterDiv farma ${cardStyle} ${localidad} principal">
                         <div class="text-center">
                             <h5 class="nombre_farmacias audifarm">${farmacia.nombre}</h5>
                             <div class="card-line primer"></div>
@@ -65,7 +65,7 @@ function agregarFarmacias() {
                     </div>`;
         }
         else{
-            return `<div class="farma ${cardStyle} filterDiv ${localidad}">
+            return `<div data-aos="fade-right" class="farma ${cardStyle} filterDiv ${localidad}">
                             <div class="text-center">
                                 <h5 class="nombre_farmacias">${farmacia.nombre}</h5>
                                 <div class="card-line"></div>
@@ -79,13 +79,13 @@ function agregarFarmacias() {
     document.getElementById("listadoFarmacias").innerHTML = listado.join('');
 
     var phoneNumberLinks = document.getElementsByClassName("whatsapp");
-  for (var i = 0; i < phoneNumberLinks.length; i++) {
-    phoneNumberLinks[i].addEventListener("click", function (event) {
-      event.preventDefault();
-      var phoneNumber = this.innerText.replace(/[^0-9]/g, "");
-      redirectToWhatsApp(phoneNumber);
-    });
-  }
+    for (var i = 0; i < phoneNumberLinks.length; i++) {
+      phoneNumberLinks[i].addEventListener("click", function (event) {
+        event.preventDefault();
+        var phoneNumber = this.innerText.replace(/[^0-9]/g, "");
+        redirectToWhatsApp(phoneNumber);
+      });
+    }
 }
 
 function redirectToWhatsApp(phoneNumber) {
@@ -112,8 +112,10 @@ function filterSelection(location) {
   
         if (farmaciaLocation) {
           farmacia.style.display = "block";
+          farmacia.setAttribute("data-aos", "fade-right");
         } else {
           farmacia.style.display = "none";
+          farmacia.removeAttribute("data-aos");
         }
       }
     }
@@ -129,4 +131,3 @@ function filterSelection(location) {
         this.className += " active";
     });
 }
-
