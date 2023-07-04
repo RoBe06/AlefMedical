@@ -39,11 +39,13 @@ var farmacias = [
 
     {nombre : "Farmacia Luján",
     domicilio : "Pueyrredón 1494",
+    whatsapp : 3874890207,
     localidad : "Salta"},      
 
     {nombre : "Farmacia Farmarket",
     domicilio : "Mendoza 386 - S.M. Tucumán",
-    telefono : 3854108383,
+    telefono : 3814222879,
+    whatsapp : 3816335797,
     localidad : "Tucumán"}
 ]
 
