@@ -486,7 +486,7 @@ header .logo_container .logo {
   }
   .listado_container .principal {
     grid-area: principal;
-    height: 220px !important;
+    height: 240px !important;
   }
   .listado_container .primero {
     height: 260px;
