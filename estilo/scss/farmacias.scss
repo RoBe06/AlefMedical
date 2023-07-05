@@ -51,6 +51,11 @@
         color: #427cb3;
         font-size: 20px;
         margin: 10px;
+        font-weight: 600;
+      }
+
+      #logos{
+        width: 18px;
       }
     }
     
@@ -68,11 +73,11 @@
   }
 
   .primero {
-    height: 210px;
+    height: 220px;
   }
 
   .segundo {
-    height: 200px;
+    height: 210px;
   }
 
   .show {
@@ -126,6 +131,14 @@
 
    .farma {
     width: 300px;
+
+    .farmacias_numero{
+      font-size: 18px;
+    }
+
+    #logos{
+      width: 17wqspx;
+    }
    }
 
    .primero {
@@ -133,7 +146,7 @@
     }
     
     .segundo{
-      height: 210px;
+      height: 220px;
     }
   }
 }
@@ -150,7 +163,7 @@
     }
 
     .segundo {
-      height: 190px;
+      height: 200px;
       width: 100%;
     }
 
@@ -163,13 +176,17 @@
      .farma {
 
       .farmacias_numero{
-      font-size: 19px;
+      font-size: 15px;
      }
 
      .nombre_farmacias {
       font-weight: 700;
       font-size: 22px;
       color: #2b5074;
+    }
+
+    #logos{
+      width: 16px;
     }
     }
 
@@ -199,7 +216,7 @@
     }
   
     .segundo {
-      height: 170px;
+      height: 180px;
     }
 
     .primer{
@@ -208,6 +225,17 @@
 
     .audifarm{
       color: #22814d !important;
+    }
+
+    .farma {
+
+      .farmacias_numero{
+      font-size: 18px;
+     }
+
+     #logos{
+      width: 18px;
+    }
     }
   } 
 }
@@ -237,7 +265,7 @@
     }
 
     .segundo {
-      height: 190px;
+      height: 200px;
     }
   } 
 }
@@ -267,7 +295,7 @@
     }
 
     .segundo {
-      height: 190px;
+      height: 200px;
     }
 
   } 
@@ -314,7 +342,11 @@
       }
 
       .farmacias_numero {
-        font-size: 17px;
+        font-size: 15px;
+      }
+
+      #logos{
+        width: 16px;
       }
     }
   } 
@@ -356,9 +388,10 @@
         font-size: 15px;
       }
 
-      .farmacias_numero {
-        font-size: 17px;
+      #logos{
+        width: 15px;
       }
+
     }
   } 
 
@@ -383,6 +416,16 @@
 
      .primero {
       height: 240px;
+    }
+
+    .farma{
+      .farmacias_numero{
+        font-size: 13px;
+      }
+
+      #logos{
+        width: 14px;
+      }
     }
   } 
 }
