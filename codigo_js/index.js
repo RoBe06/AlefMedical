@@ -19,6 +19,18 @@ var farmacias = [
     whatsapp : 1163999506,
     envioDomicilio : "Envios a domicilio"},
 
+    {nombre : "Farmacia GADE",
+    domicilio : "Av.Santa Fé 4288",
+    telefono : 1147772643,
+    whatsapp : 1160236032,
+    localidad : "CABA"}, 
+    
+    {nombre : "Farmacia GEL",
+    domicilio : "Tte.Gral.Perón 3734",
+    telefono : 1148657741,
+    whatsapp : 1160236031,
+    localidad : "CABA"},
+
     {nombre : "Farmacia Farmafé",
     domicilio : "Av.Rivadavia 4399",
     telefono :  1122993276,
@@ -48,19 +60,7 @@ var farmacias = [
     domicilio : "Mendoza 386 - S.M. Tucumán",
     telefono : 3814222879,
     whatsapp : 3816335797,
-    localidad : "Tucumán"},
-
-    {nombre : "Farmacia GADE",
-    domicilio : "Av.Santa Fé 4288",
-    telefono : 1147772643,
-    whatsapp : 1160236032,
-    localidad : "CABA"}, 
-    
-    {nombre : "Farmacia GEL",
-    domicilio : "Tte.Gral.Perón 3734",
-    telefono : 1148657741,
-    whatsapp : 1160236031,
-    localidad : "CABA"}
+    localidad : "Tucumán"}
 ]
 
 function agregarFarmacias() {
