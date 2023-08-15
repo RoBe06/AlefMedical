@@ -74,7 +74,7 @@ function agregarFarmacias() {
         var envio = farmacia.envioDomicilio ? `<p class="farmacias_envio">${farmacia.envioDomicilio} <br> </p>` : "";
         var whatsapp = farmacia.whatsapp ? `<p class="farmacias_numero whatsapp"> <img src="imagenes/logoWhatsapp.png" alt="" id="logos"><a href="https://api.whatsapp.com/send?phone=+54${farmacia.whatsapp}" class="farmacias_numero whatsapp">${foramtearNumero(farmacia.whatsapp,farmacia.localidad)}<br> </a></p>` : "";
         var cardStyle = ((farmacia.whatsapp && farmacia.envioDomicilio) || farmacia.envioDomicilio)? "primero" : "segundo";
-        var localidad = (farmacia.localidad === "CABA" || farmacia.localidad === "Lomas de Zamora") ? "filtro_uno" : "filtro_dos";
+        var localidad = (farmacia.localidad === "CABA" || farmacia.localidad === "Lomas de Zamora - Bs.As." || farmacia.localidad === "La Plata - Bs.As.") ? "filtro_uno" : "filtro_dos";
         
         if(index == 0) {
             return `<div data-aos="fade-right" class="filterDiv farma ${cardStyle} ${localidad} principal">
@@ -140,12 +140,7 @@ agregarFarmacias();
 function filterSelection(location) {
     var farmacias = document.getElementsByClassName("filterDiv");
   
-    if (location === "all") {
-      for (var i = 0; i < farmacias.length; i++) {
-        farmacias[i].style.display = "block";
-
-      }
-    } else {
+    if (location === "filtro_uno" || location === "filtro_dos") {
       for (var i = 0; i < farmacias.length; i++) {
         var farmacia = farmacias[i];
         var farmaciaLocation = farmacia.classList.contains(location);
@@ -158,18 +153,28 @@ function filterSelection(location) {
 
         }
       }
+    } else {
+      for (var i = 0; i < farmacias.length; i++) {
+        farmacias[i].style.display = "block";
+
+      }
     }
 
     AOS.refresh();
   }
 
-  var btnContainer = document.getElementById("myBtnContainer");
-
+  window.onload = function() {
+   
+    filterSelection('filtro_uno');
+    
+    var btnContainer = document.getElementById("myBtnContainer");
     var btns = btnContainer.getElementsByClassName("btn");
+    
     for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function() {
+      btns[i].addEventListener("click", function() {
         var current = document.getElementsByClassName("active");
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
-    });
-}
+      });
+    }
+  };
