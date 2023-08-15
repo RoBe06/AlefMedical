@@ -32,7 +32,7 @@ var farmacias = [
     localidad : "CABA"},
 
     {nombre : "Farmacia 60 Querini",
-    domicilio : "Plaza Hipólito Yrigoyen nro 60 (19 y 60)",
+    domicilio : "Plaza Hipólito Yrigoyen nro 68 (19 y 60)",
     whatsapp : 2213533543,
     localidad : "La Plata - Bs.As."},
 
