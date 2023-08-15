@@ -31,6 +31,11 @@ var farmacias = [
     whatsapp : 1160236031,
     localidad : "CABA"},
 
+    {nombre : "Farmacia 60 Querini",
+    domicilio : "Plaza Hipólito Yrigoyen nro 60 (19 y 60)",
+    whatsapp : 2213533543,
+    localidad : "La Plata - Bs.As."},
+
     {nombre : "Farmacia Farmafé",
     domicilio : "Av.Rivadavia 4399",
     telefono :  1122993276,
@@ -39,7 +44,7 @@ var farmacias = [
     {nombre : "Farmacia Rissi",
     domicilio : "H.Yrigoyen 8955",
     telefono : 1142442644,
-    localidad : "Lomas de Zamora"},
+    localidad : "Lomas de Zamora - Bs.As."},
 
     {nombre : "Farmacia Rucci",
     domicilio : "San Juan 497 - Rosario",
@@ -108,7 +113,7 @@ function agregarFarmacias() {
     function foramtearNumero(numero, localidad) {
       var digitos = numero.toString().replace(/\D/g, '');
       var numeroFormateado;
-      if (localidad == "CABA" || localidad == "Lomas de Zamora") {
+      if (localidad == "CABA" || localidad == "Lomas de Zamora - Bs.As." || localidad == "La Plata - Bs.As.") {
         numeroFormateado = '(' + digitos.substring(0, 2) + ') ' + digitos.substring(2, 6) + '-' + digitos.substring(6);
       } else if (localidad == "La Pampa"){
         numeroFormateado = '(' + digitos.substring(0, 4) + ') ' + digitos.substring(4, 6) + '-' + digitos.substring(6);
