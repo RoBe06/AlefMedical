@@ -65,14 +65,19 @@ var farmacias = [
     domicilio : "Mendoza 386 - S.M. Tucumán",
     telefono : 3814222879,
     whatsapp : 3816335797,
-    localidad : "Tucumán"}
+    localidad : "Tucumán"},
+
+    {nombre : "Farmacia FARMAPLUS",
+    domicilio : "25 de Mayo 707",
+    whatsapp : 3794725782,
+    localidad : "Corrientes Capital"}
 ]
 
 function agregarFarmacias() {
     var listado = farmacias.map(function(farmacia, index) {
-        var telefono = farmacia.telefono ? `<p class="farmacias_numero"> <img src="imagenes/logoTelefono.png" alt="" id="logos"><a href="tel:+54 ${farmacia.telefono}" class="farmacias_numero">${foramtearNumero(farmacia.telefono, farmacia.localidad)}<br> </a></p>` : "";
+        var telefono = farmacia.telefono ? `<p class="farmacias_numero"> <img src="imagenes/logoTelefono.png" alt="" id="logos"><a href="tel:+54 ${farmacia.telefono}" class="farmacias_numero">${formatearNumero(farmacia.telefono, farmacia.localidad)}<br> </a></p>` : "";
         var envio = farmacia.envioDomicilio ? `<p class="farmacias_envio">${farmacia.envioDomicilio} <br> </p>` : "";
-        var whatsapp = farmacia.whatsapp ? `<p class="farmacias_numero whatsapp"> <img src="imagenes/logoWhatsapp.png" alt="" id="logos"><a href="https://api.whatsapp.com/send?phone=+54${farmacia.whatsapp}" class="farmacias_numero whatsapp">${foramtearNumero(farmacia.whatsapp,farmacia.localidad)}<br> </a></p>` : "";
+        var whatsapp = farmacia.whatsapp ? `<p class="farmacias_numero whatsapp"> <img src="imagenes/logoWhatsapp.png" alt="" id="logos"><a href="https://api.whatsapp.com/send?phone=+54${farmacia.whatsapp}" class="farmacias_numero whatsapp">${formatearNumero(farmacia.whatsapp,farmacia.localidad)}<br> </a></p>` : "";
         var cardStyle = ((farmacia.whatsapp && farmacia.envioDomicilio) || farmacia.envioDomicilio)? "primero" : "segundo";
         var localidad = (farmacia.localidad === "CABA" || farmacia.localidad === "Lomas de Zamora - Bs.As." || farmacia.localidad === "La Plata - Bs.As.") ? "filtro_uno" : "filtro_dos";
         
@@ -83,7 +88,7 @@ function agregarFarmacias() {
                             <div class="card-line primer"></div>
                             <p class="farmacias_domicilio audifarm"><img src="imagenes/logoLocation.png" alt="" id="logos"> ${farmacia.domicilio} - ${farmacia.localidad}</p>
                             <p class="farmacias_envio audifarm"> ${farmacia.envioDomicilio} </p> 
-                            <p class="farmacias_numero prm whatsapp"> <img src="imagenes/logoWhatsapp.png" alt="" id="logos"><a href="https://api.whatsapp.com/send?phone=+54${farmacia.whatsapp}" class="farmacias_numero prm whatsapp"> ${foramtearNumero(farmacia.whatsapp,farmacia.localidad)}<br></a></p>    
+                            <p class="farmacias_numero prm whatsapp"> <img src="imagenes/logoWhatsapp.png" alt="" id="logos"><a href="https://api.whatsapp.com/send?phone=+54${farmacia.whatsapp}" class="farmacias_numero prm whatsapp"> ${formatearNumero(farmacia.whatsapp,farmacia.localidad)}<br></a></p>    
                         </div>
                     </div>`;
         }
@@ -110,7 +115,7 @@ function agregarFarmacias() {
       });
     }
 
-    function foramtearNumero(numero, localidad) {
+    function formatearNumero(numero, localidad) {
       var digitos = numero.toString().replace(/\D/g, '');
       var numeroFormateado;
       if (localidad == "CABA" || localidad == "Lomas de Zamora - Bs.As.") {
