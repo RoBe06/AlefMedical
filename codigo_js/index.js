@@ -70,6 +70,11 @@ var farmacias = [
     {nombre : "Farmacia FARMAPLUS",
     domicilio : "25 de Mayo 707",
     whatsapp : 3794725782,
+    localidad : "Corrientes Capital"},
+
+    {nombre : "Farmacia CAPITAL SCS",
+    domicilio : "Av Maipu 249",
+    whatsapp : 3794886003,
     localidad : "Corrientes Capital"}
 ]
 
