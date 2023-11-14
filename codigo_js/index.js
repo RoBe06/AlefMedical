@@ -75,7 +75,13 @@ var farmacias = [
     {nombre : "Farmacia CAPITAL SCS",
     domicilio : "Av Maipu 249",
     whatsapp : 3794886003,
-    localidad : "Corrientes Capital"}
+    localidad : "Corrientes Capital"},
+
+    {nombre : "Farmacia FARMATOTAL",
+    domicilio : "J.V. Zapata 303 (Esq. Rioja)",
+    telefono : 2614291853,
+    whatsapp :  2615527786,
+    localidad : "Mendoza Capital"}
 ]
 
 function agregarFarmacias() {
