@@ -353,7 +353,7 @@ header .logo_container .logo {
     width: 350px;
   }
   .listado_container .primero {
-    height: 240px;
+    height: 280px;
   }
 }
 @media screen and (max-width: 770px) {
@@ -380,7 +380,7 @@ header .logo_container .logo {
     width: 17wqspx;
   }
   .listado_container .primero {
-    height: 260px;
+    height: 300px;
   }
   .listado_container .segundo {
     height: 220px;
@@ -392,7 +392,7 @@ header .logo_container .logo {
     grid-template-columns: 250px 250px;
   }
   .listado_container .primero {
-    height: 280px;
+    height: 300px;
     width: 100%;
   }
   .listado_container .segundo {
@@ -489,7 +489,7 @@ header .logo_container .logo {
     height: 240px !important;
   }
   .listado_container .primero {
-    height: 260px;
+    height: 300px;
   }
   .listado_container .segundo {
     height: 200px;
@@ -510,7 +510,7 @@ header .logo_container .logo {
     height: 230px !important;
   }
   .listado_container .primero {
-    height: 240px;
+    height: 280px;
   }
   .listado_container .segundo {
     height: 180px;
@@ -546,7 +546,7 @@ header .logo_container .logo {
     height: 220px !important;
   }
   .listado_container .primero {
-    height: 230px;
+    height: 250px;
   }
   .listado_container .farma .nombre_farmacias {
     font-size: 18px;

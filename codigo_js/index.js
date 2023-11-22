@@ -10,14 +10,14 @@ var farmacias = [
     localidad : "CABA",
     telefono : 1155547975,
     whatsapp : 1163999506,
-    envioDomicilio : "Envios a domicilio"},
+    envioDomicilio : "Envios a domicilio (consulte costo)"},
 
     {nombre : "Farmacia Scienza - Pellegrini",
     domicilio : "C.Pellegrini 163",
     localidad : "CABA",
     telefono : 1155547975,
     whatsapp : 1163999506,
-    envioDomicilio : "Envios a domicilio"},
+    envioDomicilio : "Envios a domicilio (consulte costo)"},
 
     {nombre : "Farmacia GADE",
     domicilio : "Av.Santa Fé 4288",
