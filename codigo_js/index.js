@@ -61,10 +61,10 @@ var farmacias = [
     whatsapp : 3874890207,
     localidad : "Salta"},      
 
-    {nombre : "Farmacia Farmarket",
-    domicilio : "Mendoza 386 - S.M. Tucumán",
-    telefono : 3814222879,
-    whatsapp : 3816335797,
+    {nombre : "Farmacia Muñecas",
+    domicilio : "Congreso 1088 - S.M. Tucumán",
+    telefono : 3812321924,
+    whatsapp : 3812125060,
     localidad : "Tucumán"},
 
     {nombre : "Farmacia FARMAPLUS",
