@@ -19,18 +19,6 @@ var farmacias = [
     whatsapp : 1163999506,
     envioDomicilio : "Envios a domicilio (consulte costo)"},
 
-    {nombre : "Farmacia GADE",
-    domicilio : "Av.Santa Fé 4288",
-    telefono : 1147772643,
-    whatsapp : 1160236032,
-    localidad : "CABA"}, 
-    
-    {nombre : "Farmacia GEL",
-    domicilio : "Tte.Gral.Perón 3734",
-    telefono : 1148657741,
-    whatsapp : 1160236031,
-    localidad : "CABA"},
-
     {nombre : "Farmacia 60 Querini",
     domicilio : "Plaza H. Yrigoyen N°68 (e/ 19 y diag 75)",
     whatsapp : 2213533543,
